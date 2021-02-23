@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Фавориты "Я охочусь на тебя"</title>
+	<link rel="stylesheet" type="text/css" href="files/styles.css">
+</head>
+<body>
+	<section>
+		<div class = "circle"></div>
+		<header>
+			<a href="#" class = "logo"><img src="files\images\logo.png"></a>
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#" class = "active">"Я охочусь на тебя"</a></li>
+				<li><a href="#">"Секрет Небес"</a></li>
+				<li><a href="#">"Дракула: История любви"</a></li>
+			</ul>	
+		</header>
+		<div class = "content">
+			<div class = "textBox">
+				<h2 id = "name">Александр</h2>
+				<br>
+				<h3>Возраст: <span id = "age">25 лет</span></h3>
+				<h3>Рост: <span id = "heigh">180 см</span></h3>
+				<h3>Знак зодиака: <span id = "zodiac">Лев</span></h3>
+				<br>
+				<h3>Любит: <br><span id = "love">- логические загадки <br>- интеллектуальные спорты <br>- ананасы</span></h3>
+				<br>
+				<h3>Не любит: <br><span id = "hate">- глупость в разговорах <br>- медленный транспорт</span></h3>
+			</div>
+			<div class = "imgBox">
+				<img src="files\images\img1.png" class = "character" id = "character">
+			</div>
+		</div>
+		<ul class = "thumb"> 
+			<li><img src="files\images\thumb1.png" onclick="changeImg('img1.png')"></li>
+			<li><img src="files\images\thumb2.png" onclick="changeImg('img2.png')"></li>
+			<li><img src="files\images\thumb3.png" onclick="changeImg('img3.png')"></li>
+			<li><img src="files\images\thumb4.png" onclick="changeImg('img4.png')"></li>
+			<li><img src="files\images\thumb5.png" onclick="changeImg('img5.png')"></li>
+		</ul>
+		<ul class = "contact">
+			<li><a href="https://vk.com/romanceclubofficial"><img src="files\images\vk.png"></a></li>
+			<li><a href="https://www.instagram.com/romanceclubgame/"><img src="files\images\instagram.png"></a></li>
+		</ul>
+	</section>
+
+	<script type="text/javascript">
+		function changeImg(anything){
+			img = document.getElementById('character');
+			img.setAttribute('src','files/images/' + anything);
+
+			if(anything == 'img1.png'){
+				const circle = document.querySelector('.circle');
+				circle.style.background = '#28635d';
+				document.getElementById("name").innerHTML= "Александр";
+				document.getElementById("name").style.color = '#28635d';
+				document.getElementById("age").innerHTML= "25 года";
+				document.getElementById("heigh").innerHTML= "180 см";
+				document.getElementById("zodiac").innerHTML= "Лев";
+				document.getElementById("love").innerHTML= "- логические загадки <br> - интеллектуальные спорты <br>- ананасы";
+				document.getElementById("hate").innerHTML= "- глупость в разговорах <br>- медленный транспорт";
+			}
+
+			if(anything == 'img2.png'){
+				const circle = document.querySelector('.circle');
+				circle.style.background = '#2a1a4b';
+				document.getElementById("name").innerHTML= "Сэм";
+				document.getElementById("name").style.color = '#2a1a4b';
+				document.getElementById("age").innerHTML= "24 года";
+				document.getElementById("heigh").innerHTML= "178 см";
+				document.getElementById("zodiac").innerHTML= "Дева";
+				document.getElementById("love").innerHTML= "- составлять планы <br> - нарушать ПДД";
+				document.getElementById("hate").innerHTML= "- гаишников <br>- японскую кухню <br>- Александра";
+			}
+
+			if(anything == 'img3.png'){
+				const circle = document.querySelector('.circle');
+				circle.style.background = '#641e28';
+				document.getElementById("name").innerHTML= "Рэйчел";
+				document.getElementById("name").style.color = '#641e28';
+				document.getElementById("age").innerHTML= "24 года";
+				document.getElementById("heigh").innerHTML= "165 см";
+				document.getElementById("zodiac").innerHTML= "Весы";
+				document.getElementById("love").innerHTML= "- запах бензина <br> - кремовые пирожные <br>- делать прически";
+				document.getElementById("hate").innerHTML= "- врачей <br>- ананасы";
+			}
+
+			if(anything == 'img4.png'){
+				const circle = document.querySelector('.circle');
+				circle.style.background = '#37020c';
+				document.getElementById("name").innerHTML= "Эллиа";
+				document.getElementById("name").style.color = '#37020c';
+				document.getElementById("age").innerHTML= "25 года";
+				document.getElementById("heigh").innerHTML= "200 см";
+				document.getElementById("zodiac").innerHTML= "Водолей";
+				document.getElementById("love").innerHTML= "- шахматы <br> - регги <br>- чай с молоком";
+				document.getElementById("hate").innerHTML= "- стереотипы <br>- пьяных за рулем";
+			}
+
+			if(anything == 'img5.png'){
+				const circle = document.querySelector('.circle');
+				circle.style.background = '#231b28';
+				document.getElementById("name").innerHTML= "Ева";
+				document.getElementById("name").style.color = '#231b28';
+				document.getElementById("age").innerHTML= "24 года";
+				document.getElementById("heigh").innerHTML= "170 см";
+				document.getElementById("zodiac").innerHTML= "Овен";
+				document.getElementById("love").innerHTML= "- Glock-17 <br> - коньяк <br>- перьевые ручки";
+				document.getElementById("hate").innerHTML= "- шведскую погоду <br>- маленьких собачек";
+			}
+		}
+	</script>
+</body>
+</html>
